@@ -7,8 +7,8 @@
 
 <body>
   <h1>Git Essentials</h1>
-  <p>Git -Version control software has “Distributed “repository model.</p>
-  <p></p>The repository model available are:
+  <p>Git -Version control software has <b>“Distributed“</b> repository model.</p>
+  <p>The repository model available are:
   <ol>
     <li><b>Distributed</b> - every user has a <b>local copy</b> of the repository in addition to the central repo on the server side.
       Example: <b>Git</b></li>
@@ -41,6 +41,99 @@
       </td>
     </tr>
   </table>
-
+  <p>Configurations are:
+    <ol>
+      <li><b>System:</b> git config –system</li>
+      <li><b>User:</b> git config –global</li>
+      <li><b>Project:</b> git config</li>
+     </ol>
+    </p>
+    <p>Git init creates .git folder with all configuration required files. </p>
+    <p>Two repeated processes: AddCommit</p>
+    <p>The latest commit message store in the COMMIT_EDITMSG file.</p>
+    <p>Git logs are stores in the .git/logs/refs/heads/master file. As well as, in the .git/logs/HEAD</p>
+    <table cellspacing="3" bgcolor="#000000">
+      <tr bgcolor="#ffffff">
+        <th><b>Working</b></th>
+        <th><b>Staging Index</b></th>
+        <th><b>Repository</b></th>
+      </tr>
+      <tr bgcolor="#ffffff">
+        <td>&nbsp;</td>
+        <td>git add</td>
+        <td>git commit</td>
+      </tr>
+    </table>
+    <p>Git uses SHA-1 (Secure Hash Algorithm 1) produce and rendered as 40-digit hexadecimal value.</p>
+    <p>The below code changes in the \Git\etc\gitconfig file that show the difference in the file(s) before add/commit</p>
+    <p><i>[diff]</i></p>
+    <p><i>tool = winM</i></p>
+    <p><i>[difftool]</i></p>
+    <p><i>prompt = false</i></p>
+    <p><i>[difftool "winM"]</i></p>
+    <p><i>cmd = \"D:/Program Files (x86)/WinMerge/WinMergeU.exe\" \"$LOCAL\" \"$REMOTE\"</i></p>
+    <p><i>[merge]</i></p>
+    <p><i>tool = winM</i></p>
+    <p><i>[mergetool]</i></p>
+    <p><i>prompt = false</i></p>
+    <p><i>keepBackup = false</i></p>
+    <p><i>[mergetool "winM"]</i></p>
+    <p><i>cmd = \"D:/Program Files (x86)/WinMerge/WinMergeU.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"</i></p>
+    <p><i>trustExitCode = true</i></p>
+    <p><i>[alias]</i></p>
+    <p><i>dt = difftool</i></p>
+    <p><i>mt = mergetool</i></p>
+    <table cellspacing="3" bgcolor="#000000">
+      <tr bgcolor="#ffffff">
+        <th><b>Description</b></th>
+        <th><b>Command</b></th>
+      </tr>
+      <tr bgcolor="#ffffff">
+        <td>To view the difference between stage and repository</td>
+        <td>git diff –staged</td>
+      </tr>
+      <tr bgcolor="#ffffff">
+        <td>Delete Files</td>
+        <td>git rm <i>file_name</i></td>
+      </tr>
+      <tr bgcolor="#ffffff">
+        <td>Rename/Move</td>
+        <td>git mv <i>file_name</i>  <new_filen_ame></new_filen_ame></td>
+      </tr>
+      <tr bgcolor="#ffffff">
+        <td>We can see exact change</td>
+        <td>git diff –color-words command</td>
+      </tr>
+      <tr bgcolor="#ffffff">
+        <td>Undo the local changes</td>
+        <td>git checkout -- <i>file_name</i></td>
+      </tr>
+      <tr bgcolor="#ffffff">
+        <td>Undo all local changes</td>
+        <td>git checkout .</td>
+      </tr>
+      <tr bgcolor="#ffffff">
+        <td>Undo the changes of staging</td>
+        <td>git reset HEAD <i>file_name</i></td>
+      </tr>
+      <tr bgcolor="#ffffff">
+        <td>Revert a particular SHA</td>
+        <td>git revert <i>SHA></i></td>
+      </tr>
+      <tr bgcolor="#ffffff">
+        <td>Clean tracked files</td>
+        <td>git clean -i/m/f</td>
+      </tr>
+      <tr bgcolor="#ffffff">
+        <td>Ignore files</td>
+        <td>.gitignore<br/>
+         <a href="https://github.com/github/gitignore">https://github.com/github/gitignore</a>
+        </td>
+      </tr>
+      <tr bgcolor="#ffffff">
+        <td>Remove from staging</td>
+        <td>git rm –cache <i>file_name</i></td>
+      </tr>
+    </table>
 </body>
 </html>
